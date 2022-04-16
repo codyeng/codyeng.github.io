@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Assign 4 - Form Processor</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		<!-- HIDE FROM INCOMPATIBLE BROWSERS
+		//Output some HTML text to the page
+		document.write("<h2>Your form has been submitted!</h2><h3>You entered the following data:</h3><p>");
+		//get information from URL
+		var formData = location.search;
+		//remove the "?" from URL's information
+		formData = formData.substring(1, formData.length);
+		//change all "+" to a space in the URL's information
+		while (formData.indexOf("+") != -1) {
+			formData = formData.replace("+", " ");
+		}
+		//split the URL's information into smaller chunks on the "&" character
+		var formArray = formData.split("&");
+		//output the smaller chunks with a line break at the end
+		for (var i=0; i < formArray.length; ++i) {
+			document.write(formArray[i] + "<br>");
+		}
+		document.write("</p>")
+		// STOP HIDING FROM INCOMPATIBLE BROWSERS -->
+	</script>
+</body>
+</html>

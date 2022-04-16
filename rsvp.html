@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<!--
+Assignment 5
+
+RSVP Page
+Author: Cody Hutton
+Date: 3/30/21
+due: 3/30/21
+Filename: rsvp.html
+
+-->
+
+<meta charset="utf-8">
+<title> Hutton Assign 5 </title>
+<link href = "Hutton_styles.css" rel = "stylesheet">
+<script src="Hutton_script.js"></script>
+
+
+</head>
+<body>
+	<header>
+	<h1> 
+	<img src="Hutton_logo.png" alt="MyName">
+	</h1>
+	<h1> December 27th </h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="index.html">Home page</a></li>
+			<li><a href="activites.html">Activites</a></li>
+			<li><a href="wishlist.html">Wish List</a></li>
+			<li><a href ="rsvp.html">RSVP</a></li>
+			<li><a href ="index.html#bookmark">Bookmark birthdays</a></li>
+		</ul>
+	</nav>
+
+<main>
+	<h2>  RSVP to Party </h2>		
+	<form action="formprocessor.html" method="GET" id = "myForm">
+		<fieldset>
+			<legend> Your Contact Information </legend>
+
+			<label for ="CName">Name</label>
+			<input type ="text" id="CName" name="name">
+
+
+			<label for ="CEmail">Email</label>
+			<input type ="Email" id="CEmail" name="Email">
+
+
+			<label for ="CPhone">Phone</label>
+			<input type ="Tel" id="CPhone" name="Phone">
+
+			<label for ="CAge">Age</label>
+			<input type ="Number" id="CAge" name="Age" min=1 max=99>
+
+			<label for ="CBday">Birthday</label>
+			<input type ="Date" id="CBday" name="Bday">
+
+			<label for ="CColor">Favorite Color</label>
+			<input type ="Color" id="CColor" name="Color" value="#0000FF">
+
+			<label for ="CGame">Favorite Party Game</label>
+			<select name="PartyGame" id="CGame">
+				<option value= "Cards">Cards</option>
+				<option value= "Pool">Pool</option>
+				<option value= "Bowling">Bowling</option>
+				<option value= "Jenga">Jenga</option>
+				<option value= "Russian Roulette">Russian Roulette</option>
+				<option value= "scrabble"> Scrabble </option>
+			</select>
+	</fieldset>
+	<fieldset>
+		<legend> Party Food Information </legend>
+
+			<div id = "EntreeChoice">
+				<p> Choice of Entree:<br>
+					<input type="radio" name="Entree" 
+					id="entPizza" value="Pizza">
+					<label for ="entPizza">Pizza</label>
+
+					<input type="radio" name="Entree"
+					id="entJP" value="Japanese">
+					<label for ="entJP">Japanese</label>
+
+					<input type="radio" name="Entree"
+					id="entChic" value="Chicken">
+					<label for ="entChic"> Chicken </label>
+
+					<input type="radio" name="Entree"
+					id="entSteak" value="steak">
+					<label for ="entSteak"> Steak </label>
+				</p>
+			</div>
+			
+
+			<div id ="SnackChoice">
+				<p> Snack Choice: <br>
+
+				<input type="checkbox" name="Snack" 
+				id="SChexMix" value="ChexMix">
+				<label for="SChexMix">Chex Mix</label>
+
+				<input type="checkbox" id="SPopCorn" 
+				name="Snack" value="PopCorn">
+				<label for="SPopCorn">PopCorn</label>
+
+				<input type="checkbox" id="SDirtCup" 
+				name="Snack" value="DirtCup">
+				<label for="SDirtCup">Oreo Dirt Cup</label>
+
+				<input type="checkbox" id="SCCake" 
+				name="Snack" value="CheeseCake">
+				<label for="SCCake">CheeseCake</label>
+
+				<input type="checkbox" id="STStrudel" 
+				name="Snack" value="ToasterStrudel">
+				<label for="STStrudel">Toaster Strudel</label>
+
+				<input type="checkbox" id="SCookies" 
+				name="Snack" value="Cookies">
+				<label for="SCookies">Cookies</label>
+			</p>
+		</div>
+				<label for="Allergies">List any food Allergies:</label>
+				<textarea id= "Allergies" name="Allergies"></textarea>
+		</fieldset>
+		<input type= "submit" value="Send RSVP">
+	</form>
+		<script>
+		 var value = document.getElementById("myForm");
+		  	value.addEventListener("submit", rsvp);
+	</script>
+</main>
+
+<footer>Copyright &copy; <script>document.write(new Date().toDateString())</script> <a href = "mailto:ch11050@georgiasouthern.edu">ch11050@georgiasouthern.edu</a> 
+</footer>
+</body>
+</html>
